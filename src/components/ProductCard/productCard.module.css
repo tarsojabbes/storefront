@@ -3,6 +3,7 @@
 .productCard {
     background-color: #FFFFFF;
     display: flex;
+    width: 12rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;

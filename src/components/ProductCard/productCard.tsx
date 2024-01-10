@@ -25,7 +25,7 @@ export default function ProductCard(props: IProductCard) {
                 {props.currency}{props.price}
             </p>
             <button className={styles.productButton}>
-                <a href='/produto'>Quero esse</a>
+                <a href='/product'>Know more</a>
             </button>
         </div>
     )
