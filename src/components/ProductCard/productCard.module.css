@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,300;1,100&display=swap');
+
+.productCard {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.25rem;
+    border-radius: 0.7rem;
+}
+
+.productImage {
+    border-radius: 0.5rem;
+}
+
+.productName {
+    color: #3D3B40;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+}
+
+.productPrice {
+    color: #3D3B40;
+}
+
+.productButton {
+    background-color: #ff1486;
+    border-style: none;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    height: 2rem;
+    font-family: Inter;
+    font-size: 1rem;
+}
