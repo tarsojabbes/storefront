@@ -4,3 +4,13 @@
   min-height: 100vh;
   background-color: #d6d6d6;
 }
+
+.productList {
+  height: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1rem
+}

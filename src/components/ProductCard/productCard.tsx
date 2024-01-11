@@ -17,6 +17,7 @@ export default function ProductCard(props: IProductCard) {
                 alt="Product Image"
                 width={150}
                 height={120}
+                style={{objectFit: "contain"}}
             />
             <h4 className={styles.productName}>
                 {props.name}

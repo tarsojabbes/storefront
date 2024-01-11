@@ -1,0 +1,206 @@
+[{
+    "id": "1",
+    "name": "T-Shirt Resiliencia",
+    "price": 49.90,
+    "imageUrl": "https://images.tcdn.com.br/img/img_prod/705643/t_shirt_resiliencia_branco_63971_1_bd3ca2f6e1c004a473e81815c78f0c73.jpg",
+    "description": "Barras e mangas com costuras reforçadas. Costuras duplas de ombro a ombro, feitas em máquinas com tecnologia de ponta garantindo assim um acabamento diferenciado para o produto, deixando a peça mais resistente e com uma estética muito bonita.\nGolas feitas em tecido de ribana, que seria um tecido mais resistente de gramatura maior, garantindo assim uma gola de ótimo qualidade e no processo de uso do dia a dia garante uma camiseta mais duradoura.",
+    "currency": "R$",
+    "onStock": true,
+    "colors": [
+        {"name": "While",
+         "hexCode": "#FFFFFF",
+         "available": true},
+        {"name": "Black",
+         "hexCode": "#000000",
+         "available": false}
+    ],
+    "sizes": [
+        {"name": "S",
+         "available": true},
+        {"name": "M",
+         "available": false},
+        {"name": "G",
+         "available": true}
+    ]},
+    {
+        "id": "2",
+        "name": "MacBook Air 13\"",
+        "price": 12499.00,
+        "imageUrl": "https://www.apple.com/v/macbook-air/q/images/overview/compare/compare_mba_m1__dsgh2hoxlkae_large.png",
+        "description": "MacBook Air 13\" Chip M2 da Apple com CPU de oito núcleos e GPU de oito núcleos, de 256GB SSD - Prateado",
+        "currency": "R$",
+        "onStock": true,
+        "colors": [
+            {"name": "Silver",
+             "hexCode": "#3D3B40",
+             "available": true}
+        ],
+        "sizes": [
+            {"name": "13 inches",
+             "available": true}
+        ]},
+        {
+            "id": "3",
+            "name": "Nintendo Switch - OLED",
+            "price": 2100.00,
+            "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_625423-MLA47920375564_102021-O.webp",
+            "description": "Com seu console Switch você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.\nSwitch tornou-se um dos consoles mais versáteis do mercado graças ao seu uso portátil e desktop. A Nintendo desenvolveu este modelo com o objetivo de ter todos os confortos da tecnologia de elite em um dispositivo portátil com o qual você pode jogar e desfrutar de diversos conteúdos online.",
+            "currency": "R$",
+            "onStock": false,
+            "colors": [],
+            "sizes": []},
+            {
+                "id": "4",
+                "name": "T-Shirt Resiliencia",
+                "price": 49.90,
+                "imageUrl": "https://images.tcdn.com.br/img/img_prod/705643/t_shirt_resiliencia_branco_63971_1_bd3ca2f6e1c004a473e81815c78f0c73.jpg",
+                "description": "Barras e mangas com costuras reforçadas. Costuras duplas de ombro a ombro, feitas em máquinas com tecnologia de ponta garantindo assim um acabamento diferenciado para o produto, deixando a peça mais resistente e com uma estética muito bonita.\nGolas feitas em tecido de ribana, que seria um tecido mais resistente de gramatura maior, garantindo assim uma gola de ótimo qualidade e no processo de uso do dia a dia garante uma camiseta mais duradoura.",
+                "currency": "R$",
+                "onStock": true,
+                "colors": [
+                    {"name": "While",
+                     "hexCode": "#FFFFFF",
+                     "available": true},
+                    {"name": "Black",
+                     "hexCode": "#000000",
+                     "available": false}
+                ],
+                "sizes": [
+                    {"name": "S",
+                     "available": true},
+                    {"name": "M",
+                     "available": false},
+                    {"name": "G",
+                     "available": true}
+                ]},
+                {
+                    "id": "5",
+                    "name": "MacBook Air 13\"",
+                    "price": 12499.00,
+                    "imageUrl": "https://www.apple.com/v/macbook-air/q/images/overview/compare/compare_mba_m1__dsgh2hoxlkae_large.png",
+                    "description": "MacBook Air 13\" Chip M2 da Apple com CPU de oito núcleos e GPU de oito núcleos, de 256GB SSD - Prateado",
+                    "currency": "R$",
+                    "onStock": true,
+                    "colors": [
+                        {"name": "Silver",
+                         "hexCode": "#3D3B40",
+                         "available": true}
+                    ],
+                    "sizes": [
+                        {"name": "13 inches",
+                         "available": true}
+                    ]},
+                    {
+                        "id": 6,
+                        "name": "Nintendo Switch - OLED",
+                        "price": 2100.00,
+                        "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_625423-MLA47920375564_102021-O.webp",
+                        "description": "Com seu console Switch você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.\nSwitch tornou-se um dos consoles mais versáteis do mercado graças ao seu uso portátil e desktop. A Nintendo desenvolveu este modelo com o objetivo de ter todos os confortos da tecnologia de elite em um dispositivo portátil com o qual você pode jogar e desfrutar de diversos conteúdos online.",
+                        "currency": "R$",
+                        "onStock": false,
+                        "colors": [],
+                        "sizes": []},
+{
+    "id": "7",
+    "name": "T-Shirt Resiliencia",
+    "price": 49.90,
+    "imageUrl": "https://images.tcdn.com.br/img/img_prod/705643/t_shirt_resiliencia_branco_63971_1_bd3ca2f6e1c004a473e81815c78f0c73.jpg",
+    "description": "Barras e mangas com costuras reforçadas. Costuras duplas de ombro a ombro, feitas em máquinas com tecnologia de ponta garantindo assim um acabamento diferenciado para o produto, deixando a peça mais resistente e com uma estética muito bonita.\nGolas feitas em tecido de ribana, que seria um tecido mais resistente de gramatura maior, garantindo assim uma gola de ótimo qualidade e no processo de uso do dia a dia garante uma camiseta mais duradoura.",
+    "currency": "R$",
+    "onStock": true,
+    "colors": [
+        {"name": "While",
+         "hexCode": "#FFFFFF",
+         "available": true},
+        {"name": "Black",
+         "hexCode": "#000000",
+         "available": false}
+    ],
+    "sizes": [
+        {"name": "S",
+         "available": true},
+        {"name": "M",
+         "available": false},
+        {"name": "G",
+         "available": true}
+    ]},
+    {
+        "id": "8",
+        "name": "MacBook Air 13\"",
+        "price": 12499.00,
+        "imageUrl": "https://www.apple.com/v/macbook-air/q/images/overview/compare/compare_mba_m1__dsgh2hoxlkae_large.png",
+        "description": "MacBook Air 13\" Chip M2 da Apple com CPU de oito núcleos e GPU de oito núcleos, de 256GB SSD - Prateado",
+        "currency": "R$",
+        "onStock": true,
+        "colors": [
+            {"name": "Silver",
+             "hexCode": "#3D3B40",
+             "available": true}
+        ],
+        "sizes": [
+            {"name": "13 inches",
+             "available": true}
+        ]},
+        {
+            "id": "9",
+            "name": "Nintendo Switch - OLED",
+            "price": 2100.00,
+            "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_625423-MLA47920375564_102021-O.webp",
+            "description": "Com seu console Switch você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.\nSwitch tornou-se um dos consoles mais versáteis do mercado graças ao seu uso portátil e desktop. A Nintendo desenvolveu este modelo com o objetivo de ter todos os confortos da tecnologia de elite em um dispositivo portátil com o qual você pode jogar e desfrutar de diversos conteúdos online.",
+            "currency": "R$",
+            "onStock": false,
+            "colors": [],
+            "sizes": []
+    },
+    {
+        "id": "10",
+        "name": "T-Shirt Resiliencia",
+        "price": 49.90,
+        "imageUrl": "https://images.tcdn.com.br/img/img_prod/705643/t_shirt_resiliencia_branco_63971_1_bd3ca2f6e1c004a473e81815c78f0c73.jpg",
+        "description": "Barras e mangas com costuras reforçadas. Costuras duplas de ombro a ombro, feitas em máquinas com tecnologia de ponta garantindo assim um acabamento diferenciado para o produto, deixando a peça mais resistente e com uma estética muito bonita.\nGolas feitas em tecido de ribana, que seria um tecido mais resistente de gramatura maior, garantindo assim uma gola de ótimo qualidade e no processo de uso do dia a dia garante uma camiseta mais duradoura.",
+        "currency": "R$",
+        "onStock": true,
+        "colors": [
+            {"name": "While",
+             "hexCode": "#FFFFFF",
+             "available": true},
+            {"name": "Black",
+             "hexCode": "#000000",
+             "available": false}
+        ],
+        "sizes": [
+            {"name": "S",
+             "available": true},
+            {"name": "M",
+             "available": false},
+            {"name": "G",
+             "available": true}
+        ]},
+        {
+            "id": "11",
+            "name": "MacBook Air 13\"",
+            "price": 12499.00,
+            "imageUrl": "https://www.apple.com/v/macbook-air/q/images/overview/compare/compare_mba_m1__dsgh2hoxlkae_large.png",
+            "description": "MacBook Air 13\" Chip M2 da Apple com CPU de oito núcleos e GPU de oito núcleos, de 256GB SSD - Prateado",
+            "currency": "R$",
+            "onStock": true,
+            "colors": [
+                {"name": "Silver",
+                 "hexCode": "#3D3B40",
+                 "available": true}
+            ],
+            "sizes": [
+                {"name": "13 inches",
+                 "available": true}
+            ]},
+            {
+                "id": "12",
+                "name": "Nintendo Switch - OLED",
+                "price": 2100.00,
+                "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_625423-MLA47920375564_102021-O.webp",
+                "description": "Com seu console Switch você terá entretenimento garantido todos os dias. Sua tecnologia foi criada para colocar novos desafios para jogadores novatos e especialistas.\nSwitch tornou-se um dos consoles mais versáteis do mercado graças ao seu uso portátil e desktop. A Nintendo desenvolveu este modelo com o objetivo de ter todos os confortos da tecnologia de elite em um dispositivo portátil com o qual você pode jogar e desfrutar de diversos conteúdos online.",
+                "currency": "R$",
+                "onStock": false,
+                "colors": [],
+                "sizes": []}
+]

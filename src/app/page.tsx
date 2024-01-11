@@ -2,8 +2,10 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import ProductCard from '@/components/ProductCard/productCard'
 import HomeHeader from '@/components/HomeHeader/homeHeader'
+import ProductsJson from "../../data/products.json"
 
 export default function Home() {
+
   return (
     <main className={styles.main}>
       <HomeHeader 
@@ -11,11 +13,16 @@ export default function Home() {
         links={[{title: "Smartphones", redirectUrl:"/smartphones"}, 
                 {title: "Computers", redirectUrl:"/computers"}, 
                 {title: "Home care", redirectUrl:"/home-care"}]}/>
-      <ProductCard 
-        name='Radiador' 
-        price={199.9} 
-        imageUrl='https://www.green.earth/hubfs/The%20top%2010%20green%20cities%20in%20the%20world-1.jpg#keepProtocol'
-        currency='R$'/>
+      <section className={styles.productList}>
+        {ProductsJson.map(product => 
+          <ProductCard
+            key={product.id}
+            name={product.name}
+            price={product.price}
+            imageUrl={product.imageUrl}
+            currency={product.currency}/>)}
+      </section>
+      
     </main>
   )
 }
