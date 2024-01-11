@@ -27,7 +27,8 @@ export default function HomeHeader(props: IHomeHeader) {
             <div className={styles.linkSection}>
             {props.links.map(link => 
                                 <a  className={styles.headerLink}
-                                    href={link.redirectUrl}>
+                                    href={link.redirectUrl}
+                                    key={link.redirectUrl}>
                                     {link.title}
                                 </a>)}
             </div>
