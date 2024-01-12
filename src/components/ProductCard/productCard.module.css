@@ -17,10 +17,12 @@
     color: #3D3B40;
     font-size: 1.25rem;
     padding: 0.5rem 0;
+    margin: 0;
 }
 
 .productPrice {
     color: #3D3B40;
+    margin: 0;
 }
 
 .knowMoreLink{
