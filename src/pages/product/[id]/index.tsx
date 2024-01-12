@@ -6,6 +6,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import WhiteCartIcon from "../../../../public/white-cart-icon.png"
 import "../../../app/globals.css"
+import { Inter } from 'next/font/google'
 
 
 interface IProductColor {
