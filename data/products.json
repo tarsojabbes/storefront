@@ -58,12 +58,17 @@
                 "currency": "R$",
                 "onStock": true,
                 "colors": [
-                    {"name": "While",
+                    {"name": "White",
                      "hexCode": "#FFFFFF",
                      "available": true},
                     {"name": "Black",
                      "hexCode": "#000000",
-                     "available": false}
+                     "available": false},
+                    {
+                     "name": "Pink",
+                     "hexCode": "#ff1486",
+                     "available": true
+                    }
                 ],
                 "sizes": [
                     {"name": "S",
@@ -91,7 +96,7 @@
                          "available": true}
                     ]},
                     {
-                        "id": 6,
+                        "id": "6",
                         "name": "Nintendo Switch - OLED",
                         "price": 2100.00,
                         "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_625423-MLA47920375564_102021-O.webp",
