@@ -1,0 +1,32 @@
+.cartItem {
+    background-color: #FFFFFF;
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.cartItem h1 {
+    color: #ff1486
+}
+
+.quantitySelector {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    gap: 0.5rem;
+}
+
+.quantitySelector button {
+    height: 2rem;
+    width: 2rem;
+    background-color: #ff1486;
+    border-radius: 100%;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    text-align: center;
+    cursor: pointer;
+}

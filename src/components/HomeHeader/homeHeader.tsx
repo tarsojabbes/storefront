@@ -35,7 +35,7 @@ export default function HomeHeader(props: IHomeHeader) {
 
             <div className={styles.utils}>
                 <a className={styles.cart}
-                    href='/login'>
+                    href='/cart'>
                     <Image
                         src={CartIcon}
                         alt="Cart icon"
