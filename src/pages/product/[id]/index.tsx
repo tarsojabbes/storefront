@@ -3,7 +3,7 @@ import ProductsJson from "../../../../data/products.json"
 import HomeHeader from "@/components/HomeHeader/homeHeader"
 import styles from "./index.module.css"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useReducer, useState } from "react"
 import WhiteCartIcon from "../../../../public/white-cart-icon.png"
 import "../../../app/globals.css"
 import { Inter } from 'next/font/google'
@@ -32,24 +32,36 @@ interface IProduct {
     sizes: IProductSize[]
 }
 
-interface ISelectedProduct {
-    id: string,
-    name: string,
-    price: number,
-    imageUrl: string,
-    description: string,
-    currency: string,
-    onStock: boolean,
-    color: IProductColor,
-    size: IProductSize
+interface ICartItem {
+    product: IProduct,
+    quantity: number
 }
-
 const Products: IProduct[] | {} = ProductsJson
  
 export default function ProductPage() {
 
     const router = useRouter()
     const {id} = router.query
+
+    const addToCart = (product: IProduct) => {
+        if (typeof window !== undefined) {
+            const cartItems: ICartItem[] = JSON.parse(
+                localStorage.getItem("cartItems") || '[]'
+            )
+
+            const foundItem = cartItems.filter((item) => item.product.id == product.id)
+
+            if (foundItem.length > 0) {
+                foundItem[0].quantity++
+            } else {
+                cartItems.push({
+                    product: product,
+                    quantity: 1
+                })
+            }
+            localStorage.setItem("cartItems", JSON.stringify(cartItems))
+        }   
+    }
     
     const [product, setProduct] = useState<IProduct>({
         id: "",
@@ -141,7 +153,8 @@ export default function ProductPage() {
                         }
 
                         {product.onStock ? 
-                            <a className={styles.addToCartButton}>
+                            <a className={styles.addToCartButton}
+                                onClick={() => addToCart(product)}>
                                 <Image 
                                     src={WhiteCartIcon}
                                     width={20}
