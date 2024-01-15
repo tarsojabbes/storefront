@@ -1,5 +1,17 @@
+.main {
+    width: 100%;
+}
 .content {
     background-color: #d6d6d6;
-    width: 100%;
     min-height: 100vh;
+    display: flex;
+    padding: 4rem;
+    gap: 1.5rem;
+}
+
+.cartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 70%;
 }

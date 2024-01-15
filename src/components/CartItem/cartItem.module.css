@@ -1,11 +1,11 @@
 .cartItem {
     background-color: #FFFFFF;
-    width: 70%;
     height: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
+    padding: 0.75rem;
 }
 
 .cartItem h1 {

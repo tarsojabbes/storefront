@@ -1,0 +1,37 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    height: 12rem;
+    width: 15%;
+    border-radius: 10px;
+    padding: 2rem;
+
+}
+
+.card p {
+    margin: 0;
+}
+
+.purchaseButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    background-color: #ff1486;
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.totalPrice {
+    color: #ff1486;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 10rem 0;
+}

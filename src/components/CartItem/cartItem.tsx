@@ -42,7 +42,8 @@ export default function CartItem(props: ICartItem) {
             const foundItem = cartItems.filter((item) => item.product.id == product.id)
 
             if (foundItem.length > 0) {
-                type === "increase" ? foundItem[0].quantity++ : foundItem[0].quantity--
+                if (type == "increase") foundItem[0].quantity++
+                else if (type == "decrease" && foundItem[0].quantity > 0) foundItem[0].quantity-- 
             }
             localStorage.setItem("cartItems", JSON.stringify(cartItems))
         }   
@@ -68,9 +69,9 @@ export default function CartItem(props: ICartItem) {
             <div>
                 <h4>Quantity: </h4>
                 <div className={style.quantitySelector}>
-                    <button onClick={() => handleQuantityChange("increase", props.product)}>+</button>
-                    <p>{props.quantity}</p>
                     <button onClick={() => handleQuantityChange("decrease", props.product)}>-</button>
+                    <p>{props.quantity}</p>
+                    <button onClick={() => handleQuantityChange("increase", props.product)}>+</button>
                 </div>
             </div>
         </section>

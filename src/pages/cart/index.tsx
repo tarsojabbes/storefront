@@ -1,8 +1,9 @@
 import HomeHeader from "@/components/HomeHeader/homeHeader";
 import "../../app/globals.css"
-import styles from "./index.module.css"
+import style from "./index.module.css"
 import { useEffect, useState } from "react";
 import CartItem from "@/components/CartItem/cartItem";
+import OrderSummary from "@/components/OrderSummary/orderSummary";
 
 interface IProductColor {
     name: string,
@@ -32,6 +33,12 @@ interface ICartItem {
     quantity: number
 }
 
+interface OrderSummary {
+    currency: string,
+    totalItems: number,
+    totalPrice: number
+}
+
 export default function CartPage() {
 
     const [cartItems, setCartItems] = useState<ICartItem[]>([])
@@ -46,23 +53,41 @@ export default function CartPage() {
         return []
     }
 
+    const calculateTotalItemsAndPrice = (cartItems: ICartItem[]) => {
+        let totalItems = 0;
+        let totalPrice = 0;
+        for (let i = 0; i < cartItems.length; i++) {
+            totalItems += cartItems[i].quantity
+            totalPrice += (cartItems[i].product.price * cartItems[i].quantity)
+        }
+        return [totalItems, totalPrice]
+    }
+
     useEffect(() => {
         setCartItems(getCartItems())
     }, [cartItems])
 
     return (
-        <main className={styles.main}>
+        <main className={style.main}>
             <HomeHeader 
                 companyLogo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/VTEX_Logo.svg/1280px-VTEX_Logo.svg.png"
                 links={[{"title": "Go back shopping", "redirectUrl": "/"}]}/>
 
-            <section className={styles.content}>
-                {cartItems.map((item) => (
-                    <CartItem 
-                        product={item.product}
-                        quantity={item.quantity}
-                        key={item.product.id}/>
-                ))}
+            <section className={style.content}>
+
+                <div className={style.cartItems}>
+                    {cartItems.map((item) => (
+                        <CartItem 
+                            product={item.product}
+                            quantity={item.quantity}
+                            key={item.product.id}/>
+                    ))}
+                </div>
+                
+                <OrderSummary
+                    currency={cartItems.length > 0 ? cartItems[0].product.currency : "R$"}
+                    totalItems={calculateTotalItemsAndPrice(cartItems)[0]}
+                    totalPrice={calculateTotalItemsAndPrice(cartItems)[1]}/>
             </section>
         </main>
     )
