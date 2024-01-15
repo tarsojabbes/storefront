@@ -1,6 +1,7 @@
 import Image from "next/image"
 import styles from "./homeHeader.module.css"
 import CartIcon from "../../../public/cart-icon.png"
+import Link from "next/link"
 
 interface IHomeHeader {
     links: IHomeHeaderLink[],
@@ -26,15 +27,15 @@ export default function HomeHeader(props: IHomeHeader) {
 
             <div className={styles.linkSection}>
             {props.links.map(link => 
-                                <a  className={styles.headerLink}
+                                <Link  className={styles.headerLink}
                                     href={link.redirectUrl}
                                     key={link.redirectUrl}>
                                     {link.title}
-                                </a>)}
+                                </Link>)}
             </div>
 
             <div className={styles.utils}>
-                <a className={styles.cart}
+                <Link className={styles.cart}
                     href='/cart'>
                     <Image
                         src={CartIcon}
@@ -43,10 +44,10 @@ export default function HomeHeader(props: IHomeHeader) {
                         height={24}
                         />
                     <p>Cart</p>
-                </a>
-                <a href="/auth">
+                </Link>
+                <Link href="/auth">
                     Register or Log In
-                </a>
+                </Link>
             </div>
         </header>
     )
