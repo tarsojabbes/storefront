@@ -1,5 +1,7 @@
+'use client'
 import Image from "next/image"
 import style from "./cartItem.module.css"
+import { useEffect, useState } from "react"
 
 interface IProductColor {
     name: string,
@@ -33,6 +35,8 @@ interface ICartItem {
 
 export default function CartItem(props: ICartItem) {
 
+    const [productQuantity, setProductQuantity] = useState<number>(props.quantity)
+
     const handleQuantityChange = (type: string, product: IProduct) => {
         if (typeof window !== undefined) {
             const cartItems: ICartItem[] = JSON.parse(
@@ -42,8 +46,15 @@ export default function CartItem(props: ICartItem) {
             const foundItem = cartItems.filter((item) => item.product.id == product.id)
 
             if (foundItem.length > 0) {
-                if (type == "increase") foundItem[0].quantity++
-                else if (type == "decrease" && foundItem[0].quantity > 0) foundItem[0].quantity-- 
+                if (type == "increase") {
+                    foundItem[0].quantity++
+                    setProductQuantity(foundItem[0].quantity)
+                }
+                else if (type == "decrease" && foundItem[0].quantity > 0) {
+                    foundItem[0].quantity--
+                    setProductQuantity(foundItem[0].quantity)
+
+                }
             }
             localStorage.setItem("cartItems", JSON.stringify(cartItems))
         }   
@@ -70,7 +81,7 @@ export default function CartItem(props: ICartItem) {
                 <h4>Quantity: </h4>
                 <div className={style.quantitySelector}>
                     <button onClick={() => handleQuantityChange("decrease", props.product)}>-</button>
-                    <p>{props.quantity}</p>
+                    <p>{productQuantity}</p>
                     <button onClick={() => handleQuantityChange("increase", props.product)}>+</button>
                 </div>
             </div>

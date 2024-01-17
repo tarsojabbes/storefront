@@ -1,6 +1,8 @@
+'use client'
+
 import HomeHeader from "@/components/HomeHeader/homeHeader";
 import "../../app/globals.css"
-import style from "./index.module.css"
+import style from "./page.module.css"
 import { useEffect, useState } from "react";
 import CartItem from "@/components/CartItem/cartItem";
 import OrderSummary from "@/components/OrderSummary/orderSummary";
@@ -48,6 +50,7 @@ export default function CartPage() {
             const cartItems: ICartItem[] = JSON.parse(
                 localStorage.getItem("cartItems") || '[]'
             )
+            setCartItems(cartItems)
             return cartItems
         }
         return []
@@ -64,8 +67,8 @@ export default function CartPage() {
     }
 
     useEffect(() => {
-        setCartItems(getCartItems())
-    }, [cartItems])
+        getCartItems()
+    }, [])
 
     return (
         <main className={style.main}>

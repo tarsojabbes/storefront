@@ -1,7 +1,9 @@
+'use client'
 import Image from "next/image"
 import styles from "./homeHeader.module.css"
 import CartIcon from "../../../public/cart-icon.png"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 interface IHomeHeader {
     links: IHomeHeaderLink[],
@@ -14,6 +16,9 @@ interface IHomeHeaderLink {
 }
 
 export default function HomeHeader(props: IHomeHeader) {
+
+    const router = useRouter()
+
     return(
         <header className={styles.homeHeader}>
             <Image 
@@ -27,7 +32,9 @@ export default function HomeHeader(props: IHomeHeader) {
 
             <div className={styles.linkSection}>
             {props.links.map(link => 
-                                <Link  className={styles.headerLink}
+                                <Link
+                                    onClick={() => router.push(`/${link.redirectUrl}`)}
+                                    className={styles.headerLink}
                                     href={link.redirectUrl}
                                     key={link.redirectUrl}>
                                     {link.title}

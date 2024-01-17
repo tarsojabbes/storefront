@@ -1,3 +1,4 @@
+'use client'
 import style from "./orderSummary.module.css"
 interface OrderSummary {
     currency: string,

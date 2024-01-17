@@ -1,12 +1,13 @@
-import { useRouter } from "next/router"
-import ProductsJson from "../../../../data/products.json"
+'use client'
+
+import { ReadonlyURLSearchParams, useRouter, useSearchParams } from "next/navigation"
+import ProductsJson from "../../../data/products.json"
 import HomeHeader from "@/components/HomeHeader/homeHeader"
-import styles from "./index.module.css"
+import styles from "./page.module.css"
 import Image from "next/image"
-import { useEffect, useReducer, useState } from "react"
-import WhiteCartIcon from "../../../../public/white-cart-icon.png"
-import "../../../app/globals.css"
-import { Inter } from 'next/font/google'
+import { useEffect, useState } from "react"
+import WhiteCartIcon from "../../../public/white-cart-icon.png"
+import "../../app/globals.css"
 
 
 interface IProductColor {
@@ -41,7 +42,7 @@ const Products: IProduct[] | {} = ProductsJson
 export default function ProductPage() {
 
     const router = useRouter()
-    const {id} = router.query
+    const searchParams: ReadonlyURLSearchParams | null = useSearchParams()
 
     const addToCart = (product: IProduct) => {
         if (typeof window !== undefined) {
@@ -76,11 +77,11 @@ export default function ProductPage() {
       });
     
       useEffect(() => {
-        const foundProduct = findProductById(id ? id[0] : "");
+        const foundProduct = findProductById(searchParams ? searchParams.get("id") : "");
         setProduct(foundProduct);
-      }, [id]);
+      }, [searchParams]);
 
-    function findProductById(id: string): IProduct{
+    function findProductById(id: string | null): IProduct{
         if (Array.isArray(Products)) {
             return Products.filter((product) => product.id === id)[0] || product;
           }

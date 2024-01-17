@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './productCard.module.css'
 import Link from 'next/link'
@@ -28,7 +30,7 @@ export default function ProductCard(props: IProductCard) {
                 {props.currency}{props.price}
             </p>
             
-                <Link href={`product/${props.id}`}
+                <Link href={`product?id=${props.id}`}
                     className={styles.knowMoreLink}>
                         Know more
                 </Link>
