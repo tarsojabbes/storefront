@@ -39,7 +39,7 @@ export default function CartItem(props: ICartItem) {
 
     const handleQuantityChange = (type: string, product: IProduct) => {
         if (typeof window !== undefined) {
-            const cartItems: ICartItem[] = JSON.parse(
+            let cartItems: ICartItem[] = JSON.parse(
                 localStorage.getItem("cartItems") || '[]'
             )
 
@@ -51,9 +51,13 @@ export default function CartItem(props: ICartItem) {
                     setProductQuantity(foundItem[0].quantity)
                 }
                 else if (type == "decrease" && foundItem[0].quantity > 0) {
-                    foundItem[0].quantity--
-                    setProductQuantity(foundItem[0].quantity)
-
+                    if (foundItem[0].quantity == 1) {
+                        cartItems = cartItems.filter((item) => item.product.id != product.id)
+                    } else {
+                        foundItem[0].quantity--
+                        setProductQuantity(foundItem[0].quantity)
+                    }
+                    
                 }
             }
             localStorage.setItem("cartItems", JSON.stringify(cartItems))

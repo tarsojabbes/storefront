@@ -57,6 +57,11 @@ export default function CartPage() {
 
   useEffect(() => {
     getCartItems();
+        const handleStorage = (event: StorageEvent) => {
+            getCartItems();
+          };
+        window.addEventListener('storage', handleStorage)
+        return () => window.removeEventListener('storage', handleStorage)
   }, []);
 
   return (
