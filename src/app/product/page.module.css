@@ -46,7 +46,7 @@
 
 .productInfo h2 {
     font-size: 1.5rem;
-    color: #ff1486;
+    color: var(--pink);
 }
 
 .colorsSelector h4 {
@@ -62,7 +62,7 @@
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
-    background-color: #ff1486;
+    background-color: var(--pink);
     width: 12rem;
     height: 3rem;
     border-radius: 7px;
@@ -75,11 +75,11 @@
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
-    border: 2px solid #ff1486;
+    border: 2px solid var(--pink);
     width: 12rem;
     height: 3rem;
     border-radius: 7px;
-    color: #ff1486
+    color: var(--pink)
 }
 
 .productDescription {
@@ -90,5 +90,5 @@
 }
 
 .productDescription h1 {
-    color: #ff1486
+    color: var(--pink)
 }

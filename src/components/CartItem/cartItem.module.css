@@ -9,7 +9,7 @@
 }
 
 .cartItem h1 {
-    color: #ff1486
+    color: var(--pink)
 }
 
 .quantitySelector {
@@ -22,7 +22,7 @@
 .quantitySelector button {
     height: 2rem;
     width: 2rem;
-    background-color: #ff1486;
+    background-color: var(--pink);
     border-radius: 100%;
     border: none;
     color: #FFFFFF;

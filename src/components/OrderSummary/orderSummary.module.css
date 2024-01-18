@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
-    background-color: #ff1486;
+    background-color: var(--pink);
     width: 12rem;
     height: 3rem;
     border: none;
@@ -30,7 +30,7 @@
 }
 
 .totalPrice {
-    color: #ff1486;
+    color: var(--pink);
     font-size: 1.25rem;
     font-weight: 700;
     margin: 10rem 0;

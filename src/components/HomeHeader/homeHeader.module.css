@@ -7,14 +7,14 @@
     justify-content: flex-start;
     align-items: center;
      
-    color: #ff1486;
+    color: var(--pink);
     text-decoration: none;
 }
 
 .linkSection {
     margin: 0 2rem;
     width: 100%;
-    color: #ff1486;
+    color: var(--pink);
      
     text-decoration: none;
 }
@@ -28,7 +28,7 @@
 }
 
 .utils a {
-    color: #ff1486;
+    color: var(--pink);
     text-decoration: none;
      
 }
@@ -45,7 +45,7 @@
 
 .headerLink {
     margin: 0 1rem;
-    color: #ff1486;
+    color: var(--pink);
     text-decoration: none;
      
 }
