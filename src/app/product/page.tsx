@@ -61,6 +61,7 @@ export default function ProductPage() {
                 })
             }
             localStorage.setItem("cartItems", JSON.stringify(cartItems))
+            window.dispatchEvent(new Event('storage'))
         }   
     }
     

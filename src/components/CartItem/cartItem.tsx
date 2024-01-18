@@ -57,6 +57,7 @@ export default function CartItem(props: ICartItem) {
                 }
             }
             localStorage.setItem("cartItems", JSON.stringify(cartItems))
+            window.dispatchEvent(new Event('storage'))
         }   
     }
 
