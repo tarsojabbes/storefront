@@ -1,6 +1,9 @@
 'use client'
 import { useEffect, useState } from "react";
 import style from "./orderSummary.module.css"
+import axios from "axios";
+import tracer from "../../instrumentation.web"
+
 interface OrderSummary {
     currency: string,
     totalItems: number,
@@ -53,6 +56,15 @@ export default function OrderSummary() {
         }
         return [];
       };
+    
+    const handlePurchaseButton = async (cartItems: ICartItem[], totalItems: number, totalPrice: number) => {
+      return await tracer.startActiveSpan("Purchase button clicked", async (span) => {
+        span.setAttribute("cart.items", JSON.stringify(cartItems))
+        span.setAttribute("cart.totalPrice", totalPrice)
+        span.setAttribute("cart.totalItems", totalItems)
+        span.end()
+      })
+    }
 
     const calculateTotalItemsAndPrice = (cartItems: ICartItem[]) => {
         let totalItems = 0;
@@ -82,7 +94,9 @@ export default function OrderSummary() {
                 {cartItems.length > 0 ? cartItems[0].product.currency : "R$"} {totalPrice}
             </p>
             <p>Total items: {totalItems}</p>
-            <button className={style.purchaseButton}>
+            <button 
+                className={style.purchaseButton}
+                onClick={() => handlePurchaseButton(cartItems, totalItems, totalPrice)}>
                 Purchase
             </button>
         </section>

@@ -6,7 +6,10 @@ import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-node'
 import { PrometheusExporter } from '@opentelemetry/exporter-prometheus'
  
 const sdk = new NodeSDK({
-    traceExporter: new OTLPTraceExporter({}),
+    traceExporter: new OTLPTraceExporter({
+        headers: {},
+        url: " http://localhost:4318/v1/traces"
+    }),
     metricReader: new PrometheusExporter({
         port: 9464,
     }),
