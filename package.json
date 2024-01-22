@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.47.0",
     "@opentelemetry/exporter-prometheus": "^0.47.0",
     "@opentelemetry/exporter-trace-otlp-http": "^0.47.0",
     "@opentelemetry/exporter-trace-otlp-proto": "^0.47.0",
