@@ -12,6 +12,7 @@ export OTEL_SERVICE_NAME="vtex-storefront"
 export OTEL_TRACES_EXPORTER="jaeger"
 export OTEL_METRICS_EXPORTER="prometheus"
 export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT="http://localhost:9090/"
+cp .env.example .env # Set yout Grafana Faro App URL
 ```
 
 2. Install the project dependencies

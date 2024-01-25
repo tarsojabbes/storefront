@@ -1,8 +1,8 @@
 'use client'
 import { useEffect, useState } from "react";
 import style from "./orderSummary.module.css"
-import axios from "axios";
-import tracer from "../../instrumentation.web"
+import { faro } from '@grafana/faro-web-sdk';
+import FaroProvider from "@/app/faroProvider";
 
 interface OrderSummary {
     currency: string,
@@ -40,7 +40,6 @@ interface IProductColor {
 
 export default function OrderSummary() {
 
-    
     const [cartItems, setCartItems] = useState<ICartItem[]>([]);
     const [totalItems, setTotalItems] = useState<number>(0);
     const [totalPrice, setTotalPrice] = useState<number>(0);
@@ -56,15 +55,6 @@ export default function OrderSummary() {
         }
         return [];
       };
-    
-    const handlePurchaseButton = async (cartItems: ICartItem[], totalItems: number, totalPrice: number) => {
-      return await tracer.startActiveSpan("Purchase button clicked", async (span) => {
-        span.setAttribute("cart.items", JSON.stringify(cartItems))
-        span.setAttribute("cart.totalPrice", totalPrice)
-        span.setAttribute("cart.totalItems", totalItems)
-        span.end()
-      })
-    }
 
     const calculateTotalItemsAndPrice = (cartItems: ICartItem[]) => {
         let totalItems = 0;
@@ -87,18 +77,20 @@ export default function OrderSummary() {
     }, []);
 
     return (
-        <section className={style.card}>
-            <b>Total price</b>
-            <p 
-                className={style.totalPrice}>
-                {cartItems.length > 0 ? cartItems[0].product.currency : "R$"} {totalPrice}
-            </p>
-            <p>Total items: {totalItems}</p>
-            <button 
-                className={style.purchaseButton}
-                onClick={() => handlePurchaseButton(cartItems, totalItems, totalPrice)}>
-                Purchase
-            </button>
-        </section>
+      <FaroProvider useTracing={true}>
+          <section className={style.card}>
+              <b>Total price</b>
+              <p 
+                  className={style.totalPrice}>
+                  {cartItems.length > 0 ? cartItems[0].product.currency : "R$"} {totalPrice}
+              </p>
+              <p>Total items: {totalItems}</p>
+              <button 
+                  className={style.purchaseButton}
+                  onClick={() => faro.api.pushEvent('purchase_button_click')}>
+                  Purchase
+              </button>
+          </section>
+        </FaroProvider>
     )
 }
