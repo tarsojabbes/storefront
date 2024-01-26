@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import style from "./orderSummary.module.css"
 import { faro } from '@grafana/faro-web-sdk';
-import FaroProvider from "@/app/faroProvider";
 
 interface OrderSummary {
     currency: string,
@@ -77,7 +76,6 @@ export default function OrderSummary() {
     }, []);
 
     return (
-      <FaroProvider useTracing={true}>
           <section className={style.card}>
               <b>Total price</b>
               <p 
@@ -91,6 +89,5 @@ export default function OrderSummary() {
                   Purchase
               </button>
           </section>
-        </FaroProvider>
     )
 }

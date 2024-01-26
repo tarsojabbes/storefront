@@ -4,12 +4,10 @@ import styles from './page.module.css'
 import ProductCard from '@/components/ProductCard/productCard'
 import HomeHeader from '@/components/HomeHeader/homeHeader'
 import ProductsJson from "../../data/products.json"
-import FaroProvider from './faroProvider'
 
 export default function Home() {
 
   return (
-    <FaroProvider useTracing={true}>
       <main className={styles.main}>
         <HomeHeader 
           companyLogo='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/VTEX_Logo.svg/1280px-VTEX_Logo.svg.png'
@@ -27,6 +25,5 @@ export default function Home() {
               currency={product.currency}/>)}
         </section>
       </main>
-    </FaroProvider>
   )
 }
