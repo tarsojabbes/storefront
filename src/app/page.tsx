@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <>
     <Script
+        id='config-hotjar-script'
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -28,7 +29,7 @@ export default function Home() {
           `,
         }}
       />
-      
+
       <main className={styles.main}>
         <HomeHeader 
           companyLogo='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/VTEX_Logo.svg/1280px-VTEX_Logo.svg.png'
