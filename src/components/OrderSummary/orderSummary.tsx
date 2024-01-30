@@ -67,6 +67,17 @@ export default function OrderSummary() {
         setTotalPrice(totalPrice);
       };
 
+    const handlePurchaseClick = (cartPrice: number) => {
+      faro.api.pushEvent('purchase_button_clicked')
+
+      faro.api.pushMeasurement({
+        type: 'purchase_price',
+        values: {
+          cart_price: cartPrice
+        },
+      })
+    }
+
     useEffect(() => {
         getCartItems();
         const handleStorage = (event: StorageEvent) => {
@@ -87,7 +98,7 @@ export default function OrderSummary() {
               <p>Total items: {totalItems}</p>
               <button 
                   className={style.purchaseButton}
-                  onClick={() => faro.api.pushEvent('purchase_button_click')}>
+                  onClick={() => handlePurchaseClick(totalPrice)}>
                   Purchase
               </button>
           </section>

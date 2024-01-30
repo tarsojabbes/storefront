@@ -13,7 +13,7 @@ export default function FaroProvider(props: IFaroProvider): React.ReactNode {
 
     if (typeof window !== 'undefined' && (!faroIsInitialized || props.useTracing !== useTracing)) {
       initializeFaro({
-        url: process.env.FARO_APP_URL,
+        url: "https://faro-collector-prod-sa-east-1.grafana.net/collect/b4929ea7531360481d27b82126516f7f",
         app: {
           name: 'vtex-storefront',
           version: '1.0.0',
