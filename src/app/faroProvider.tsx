@@ -20,10 +20,7 @@ export default function FaroProvider(props: IFaroProvider): React.ReactNode {
           environment: 'production'
         },
         
-        instrumentations: props.useTracing ? [
-          ...getWebInstrumentations(),
-          new TracingInstrumentation(),
-        ] : [...getWebInstrumentations()],
+        instrumentations: [...getWebInstrumentations()],
       });
       setUseTracing(props.useTracing)
       setFaroIsInitialized(true)

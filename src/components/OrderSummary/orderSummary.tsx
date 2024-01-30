@@ -70,6 +70,8 @@ export default function OrderSummary() {
     const handlePurchaseClick = (cartPrice: number) => {
       faro.api.pushEvent('purchase_button_clicked')
 
+      faro.api.pushLog([`${Date.now()} [PURCHASE] Purchased made`])
+
       faro.api.pushMeasurement({
         type: 'purchase_price',
         values: {
