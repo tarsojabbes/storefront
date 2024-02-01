@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
 import style from "./orderSummary.module.css"
-import { faro } from '@grafana/faro-web-sdk';
 
 interface OrderSummary {
     currency: string,
@@ -84,8 +83,7 @@ export default function OrderSummary() {
               </p>
               <p>Total items: {totalItems}</p>
               <button 
-                  className={style.purchaseButton}
-                  onClick={() => faro.api.pushEvent('purchase_button_click')}>
+                  className={style.purchaseButton}>
                   Purchase
               </button>
           </section>
