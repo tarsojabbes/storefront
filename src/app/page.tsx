@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-    <Script
+    {/* <Script
         id='config-hotjar-script'
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
@@ -26,7 +26,7 @@ export default function Home() {
               smartlook('init', 'cac6239e2de7625af4b8698f5a1f44841e517997', { region: 'eu' });
           `,
         }}
-      />
+      /> */}
 
       <main className={styles.main}>
         <HomeHeader 
