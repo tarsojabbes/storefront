@@ -24,6 +24,7 @@
     "@opentelemetry/sdk-trace-node": "^1.20.0",
     "@opentelemetry/sdk-trace-web": "^1.20.0",
     "@opentelemetry/semantic-conventions": "^1.20.0",
+    "@sentry/nextjs": "^7.106.1",
     "@vercel/otel": "^0.3.0",
     "axios": "^1.6.5",
     "next": "14.0.4",
